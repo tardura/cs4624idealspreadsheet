@@ -46,3 +46,26 @@ Run: git push origin <your branch name>
 Goto: github.com and select our repo in the <> code section.
 There should be a button to compare and review request.
 Click that then submit your pull request.
+
+Ping the group and have at least one person give you the go ahead to
+merge.
+
+In your PR, there will be a Merge button. If it says your good to merge, this
+means there are no conflicts.
+
+If you have conflicts:
+git fetch
+git rebase origin/master
+Should now say you have conflicts (the rebase freezes)
+git status - look for unmerged paths and open these file(s)
+There will be something like <<<<<<<<<<<<<<<<<<HEAD...
+HEAD are the changes on master, the others are yours. Either make changes
+to merge with master or override and use your changes.
+git add <all the files that had conflicts>
+git rebase --continue
+git push origin branchname -f
+Should be good to go...
+
+Try this out by creating a branch and making a change to team.txt by adding
+your name. If you need any help, don't hesitate to call/text/email me. We can
+meet up and I'll give you a rundown.
