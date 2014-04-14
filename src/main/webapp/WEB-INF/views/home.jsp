@@ -44,19 +44,6 @@
 			<p class="lead strong">
 				Welcome to IDEAL Spreadsheet! To query a search, follow along with the wizard below to select the events you are interested in and what kind of data your seeking.
 			</p>
-			<!-- <div class="col-md-3">
-				<select id="eventSelector" class="pull-right">
-					<option value="970">Virginia Tech Shooting</option>
-				</select>
-			</div>
-			<div class="col-md-1"></div>
-			<div class="col-md-4">
-				<input type="checkbox" id="tes0" name="test"><label for="tes0">Wordcount</label>
-			</div>
-
-			<div class="col-md-4">
-				<div id="add" class="glyphicon glyphicon-plus"></div>
-			</div> -->
 			<div id="query-generator">
 				<div id="query-slider">
 					<div>
@@ -92,7 +79,7 @@
 
 	<script type="application/javascript">
 		(function () {
-			var select, archives, url, add, request, container, labels, functions;
+			var archives, url, container, labels, functions;
 
 			container = document.getElementById('container');
 			labels = document.getElementsByTagName('label');
@@ -115,67 +102,7 @@
 				}).done(function (response) {
 					$('#wordcount').text(JSON.stringify(response));
 				});
-
-				// var table = document.createElement('table');
-				// table.setAttribute('class', 'table-bordered');
-				// var tr = document.createElement('tr');
-				// var td = document.createElement('td');
-				// td.innerHTML = 'Event';
-				// tr.appendChild(td);
-
-				// functions.each(function () {
-				// 	td = document.createElement('td');
-				// 	td.innerHTML = this.name;
-				// 	tr.appendChild(td);
-				// });
-				// table.appendChild(tr);
-				// container.appendChild(table);
 			});
-
-
-			// add.addEventListener('click', function () {
-			// 	// var query;
-			// 	// query = document.createElement();
-			// 	// console.log(select.options[select.options.selectedIndex].value);
-			// 	// console.log(checkboxes);
-			// 	// console.log(url);
-			// 	var table = document.createElement('table');
-			// 	table.setAttribute('class', 'table-bordered');
-			// 	var tr = document.createElement('tr');
-			// 	var l = checkboxes.length;
-			// 	console.log(labels);
-			// 	var td = document.createElement('td');
-			// 	td.innerHTML = 'Event';
-			// 	tr.appendChild(td);
-			// 	console.log(labels);
-
-			// 	for (var i = 0; i < l; i++) {
-			// 		td = document.createElement('td');
-			// 		td.innerHTML = labels[i].textContent;
-			// 		tr.appendChild(td);
-			// 	}
-			// 	table.appendChild(tr);
-			// 	container.appendChild(table);
-			// 	for (var i = 0; i < l; i++) {
-			// 		request = new XMLHttpRequest();
-			// 		console.log(url + labels[i].textContent + '?id=' + select.options[select.options.selectedIndex].value);
-			// 		request.open('GET', url +  labels[i].textContent.toLowerCase() + '?id=' + select.options[select.options.selectedIndex].value);
-			// 		request.send();
-			// 		request.onreadystatechange = function () {
-			// 			if (request.readyState == 4 && request.status == 200) {
-			// 			tr = document.createElement('tr');
-			// 			td = document.createElement('td');
-			// 			td.innerHTML = select.options[select.options.selectedIndex].innerHTML;
-			// 			tr.appendChild(td);
-			// 			td = document.createElement('td');
-			// 			td.innerHTML = request.response;
-			// 			console.log(request.response);
-			// 			tr.appendChild(td);
-			// 			table.appendChild(tr);
-			// 			}
-			// 		}
-			// 	}
-			// });
 		})();
 	</script>
 
