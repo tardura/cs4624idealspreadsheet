@@ -1,0 +1,33 @@
+All of this work occurs on the VM: http://www.cloudera.com/content/support/en/downloads/download-components/download-products.html?productID=F6mO278Rvo
+
+First download Spring's Tool Suite, it is just convenient and hasn't yelled at me while using the VM.
+
+http://spring.io/tools/sts/all - I'm using 'Based on Eclipse 4.3.2' for Linux, 64-bit. Shell/tarball preference
+is up to you.
+
+Install it.
+
+Clone our repository to your home directory/workspace.
+
+Open up the Spring version of Eclipse that we downloaded. Import --> Maven --> Existing --> Root = wherever you put the repository
+
+Ok... Project is in... Let's configure Hadoop so you can get some data.
+
+Run the following commands from the Terminal:
+$ sudo su hdfs
+$ hadoop fs -mkdir /user/cloudera
+$ hadoop fs -chown cloudera /user/cloudera
+$ exit
+$ sudo su cloudera
+$ hadoop fs -mkdir /user/cloudera/wordcount /user/cloudera/wordcount/970
+$ echo "Hello World Bye World" > file0
+$ echo "Hello Hadoop Goodbye Hadoop" > file1
+$ hadoop fs -put file* /user/cloudera/wordcount/970
+
+Ok, now the data is loaded.
+
+Go back to Eclipse, right click on the project and Run On Server.
+
+Either it will pop into Firefox or load it in Eclipse in their web browser. You should try to open it in Firefox. Just
+ping http://localhost:8080/idealspreadsheet/ to get the homepage. http://localhost:8080/idealspreadsheet/wordcount?id=970
+to run the job on that collection.
