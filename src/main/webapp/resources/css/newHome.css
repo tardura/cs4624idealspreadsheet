@@ -1,0 +1,43 @@
+#topLevelContainer{
+	padding:0px;
+	margin:0px;
+	height:100%;
+	width:100%;
+}
+#infoBar{
+	float:left;
+	background-color: rgb(0, 184, 255);
+	width: 209px;
+	height: 98%;
+	margin: 5px;
+	border-radius: 5px;
+	white-space: normal;
+}
+#addButton{
+	margin-top: 5px;
+	width:261%;
+}
+#tableContainer{
+	float:left;
+	width: 32%;
+}
+#spreadsheet{
+	left: 220px;
+	top:0px;
+	margin: 3px;
+	border-radius:5px;
+	border:none;
+}
+td{
+	width: 65%;
+	text-align: center;
+	display:inline-block;
+	background-color:white;
+}
+
+html, body{
+	height: 100%;
+    padding: 0;
+    margin: 0;
+    white-space: nowrap;
+    font-size: 0;
