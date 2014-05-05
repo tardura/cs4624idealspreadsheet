@@ -13,13 +13,22 @@
 	border-radius: 5px;
 	white-space: normal;
 }
+#collectionNameHolder{
+	width: 90%;
+	height:100%;
+	float: left;
+}
+#addRow{
+	position: fixed;
+	top: 92%;
+	left: 220px;
+}
 #addButton{
 	margin-top: 5px;
-	width:261%;
 }
 #tableContainer{
 	float:left;
-	width: 32%;
+	width: 83%;
 }
 #spreadsheet{
 	left: 220px;
@@ -29,12 +38,22 @@
 	border:none;
 }
 td{
-	width: 65%;
+	width: 53%;
 	text-align: center;
 	display:inline-block;
 	background-color:white;
 }
-
+.SpreadsheetButton{
+	border-radius:5px;
+	background-color: #5cb85c;
+}
+.querySelector{
+	width:100%;
+	
+}
+.input-group-btn{
+	
+}
 html, body{
 	height: 100%;
     padding: 0;
